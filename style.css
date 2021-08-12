@@ -1,0 +1,22 @@
+/*css reset*/
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  body {
+      background-color: #333;
+      color: #eee;
+  }
+
+  header {
+    text-align: center;
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  
