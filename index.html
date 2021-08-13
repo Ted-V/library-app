@@ -1,19 +1,38 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header>myLibrary</header>
-        <container class="container">
-            
-        </container>
-        
-        <script src="app.js" async defer></script>
-    </body>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form-popup" id="bookForm">
+        <form action="/action_page.php" class="form-container">
+          <h1>myLibrary &#128218;</h1>
+      
+          <label for="title"><b>Title: </b></label>
+          <input type="text" placeholder="Enter title" name="title" required>
+      
+          <label for="author"><b>Author: </b></label>
+          <input type="author" placeholder="Enter author" name="author" required>
+
+          <label for="author"><b>Finished</b></label>
+          <input type="checkbox" placeholder="Enter author's name" name="author" required>
+      
+          <button type="submit" class="addBookButton">Add Book</button>
+        </form>
+      </div> 
+    <container class="container">
+    </container>
+
+    
+
+    <script src="app.js" async defer></script>
+</body>
+
 </html>
