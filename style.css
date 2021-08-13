@@ -1,39 +1,59 @@
-/*css reset*/
 html {
     box-sizing: border-box;
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  *, *:before, *:after {
+}
+
+*, *:before, *:after {
     box-sizing: inherit;
-  }
+}
 
-  body {
-      background-color: #333;
-      color: #eee;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-  }
+body {
+    background-color: #333;
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 
-  header {
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+#bookForm {
+    display: flex;
+    justify-content: center;
     text-align: center;
-    font-size: 32px;
+}
+
+input {
+    margin: .5em;
+}
+
+.addBookButton {
+    border: none;
+    border-radius: .5em;
+    cursor: pointer;
+    font-size: 16px;
+    margin: .5em;
+}
+
+.addBookButton:hover {
+    opacity: .7;
+}
+
+.container {
     margin-top: .5em;
-  }
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
 
-  .container {
-      margin-top: .5em;
-      display: grid;
-      justify-content: center;
-      grid-template-columns: auto;
-      grid-template-rows: auto;
-  }
-
-  .book {
-      padding: 1em;
-      margin: .5em;
-      background-color:cadetblue;
-      text-align: center;
-  }
+.book {
+    padding: 1em;
+    margin: .5em;
+    background-color: cadetblue;
+    text-align: center;
+}
