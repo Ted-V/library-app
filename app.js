@@ -1,5 +1,5 @@
 // Store books
-let myLibrary = ['The Odyssey by Homer, Unfinished'];
+let myLibrary = [{title: 'The Odyssey', author: 'Homer', status: 'Unfinished'}];
 displayBooks();
 
 // Book constructor
@@ -10,9 +10,8 @@ function Book(title, author, status) {
 };
 
 // Add book to library
-function addBookToLibrary(title, author, status) {
-    let bookCard = `${title} by ${author}, ${status}`;
-    myLibrary.push(bookCard);
+function addBookToLibrary(book) {
+    myLibrary.push(book);
 }
 
 function displayBooks() {
@@ -23,9 +22,13 @@ function displayBooks() {
 
     for (let i = 0; i < myLibrary.length; i++) {
         const div = document.createElement('div');
+        const deleteBtn = document.createElement('button');
+        deleteBtn.className = "delete-button";
+        deleteBtn.textContent = "X"
         div.className = "book";
-        div.textContent = myLibrary[i];
+        div.textContent = `${myLibrary[i].title} by ${myLibrary[i].author}, ${myLibrary[i].status}`;
         container.appendChild(div);
+        div.appendChild(deleteBtn);
     }
     clearFields();
 }
@@ -45,7 +48,8 @@ addBookButton.addEventListener("click", function addNewBook() {
     } else {
         read = 'Unfinished';
     }
-    addBookToLibrary(bookTitle, bookAuthor, read)
+    let newBook = new Book(bookTitle, bookAuthor, read)
+    addBookToLibrary(newBook);
     displayBooks();
 });
 
