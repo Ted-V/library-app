@@ -57,3 +57,12 @@ input {
     background-color: cadetblue;
     text-align: center;
 }
+
+.delete-button {
+    margin: 1em;
+    width: 2em;
+    background-color: rgb(196, 50, 79);
+    border: none;
+    border-radius: .2em;
+    cursor: pointer;
+}
