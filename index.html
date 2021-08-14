@@ -11,20 +11,20 @@
 </head>
 
 <body>
-    <div class="form-popup" id="bookForm">
-        <form action="/action_page.php" class="form-container">
+    <div id="bookForm">
+        <form class="form-container">
           <h1>myLibrary &#128218;</h1>
       
           <label for="title"><b>Title: </b></label>
-          <input type="text" placeholder="Enter title" name="title" required>
+          <input type="text" placeholder="Enter title" name="title" id="bookTitle" required>
       
           <label for="author"><b>Author: </b></label>
-          <input type="author" placeholder="Enter author" name="author" required>
+          <input type="author" placeholder="Enter author" name="author" id="author" required>
 
           <label for="author"><b>Finished</b></label>
-          <input type="checkbox" placeholder="Enter author's name" name="author" required>
+          <input type="checkbox" name="readStatus" id="readStatus">
       
-          <button type="submit" class="addBookButton">Add Book</button>
+          <button type="button" class="addBookButton">Add Book</button>
         </form>
       </div> 
     <container class="container">
