@@ -1,6 +1,5 @@
 // Store books
-let myLibrary = [{title: 'The Odyssey', author: 'Homer', status: 'Unfinished'}];
-displayBooks();
+let myLibrary = [];
 
 // Book constructor
 function Book(title, author, status) {
@@ -18,15 +17,30 @@ function displayBooks() {
     const container = document.querySelector('.container');
     while (container.firstChild) {
         container.removeChild(container.lastChild)
-    };
+    }; 
 
     for (let i = 0; i < myLibrary.length; i++) {
         const div = document.createElement('div');
         const deleteBtn = document.createElement('button');
+        
         deleteBtn.className = "delete-button";
         deleteBtn.textContent = "X"
+        deleteBtn.dataset.index = i;
+        deleteBtn.addEventListener("click", function deleteBook() {
+            if (deleteBtn.parentElement.dataset.index == this.dataset.index) {
+                // Remove book div from DOM
+                this.parentElement.parentElement.removeChild(this.parentElement);
+                // Remove book object from library
+                myLibrary.splice(this.dataset.index, 1);
+                console.log(myLibrary)
+            }
+        })
+
+
         div.className = "book";
+        div.dataset.index = i; 
         div.textContent = `${myLibrary[i].title} by ${myLibrary[i].author}, ${myLibrary[i].status}`;
+        
         container.appendChild(div);
         div.appendChild(deleteBtn);
     }
@@ -58,3 +72,12 @@ function clearFields() {
     document.querySelector('#bookTitle').value = '';
     document.querySelector('#author').value = '';
 }
+
+// delete book
+/*var deleteButton = document.querySelector(".delete-button");
+
+deleteButton.addEventListener("click", function deleteBook() {
+    if (deleteButton.parentElement.dataset.index == this.dataset.index) {
+        this.parentElement.parentElement.removeChild(this.parentElement);
+    }
+})*/
