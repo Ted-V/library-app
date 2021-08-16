@@ -49,20 +49,46 @@ input {
     justify-content: center;
     grid-template-columns: auto;
     grid-template-rows: auto;
+    max-width: 100%;
 }
 
 .book {
     padding: 1em;
     margin: .5em;
-    background-color: cadetblue;
+    background-color: #495E88;
     text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    max-width: 100%;
+    word-wrap: break-word; 
+}
+
+.book-options {
+    display: flex;
+    justify-content: right;
 }
 
 .delete-button {
-    margin: 1em;
-    width: 2em;
+    margin-left: 1em;
     background-color: rgb(196, 50, 79);
     border: none;
-    border-radius: .2em;
+    border-radius: .5em;
     cursor: pointer;
+    font-size: 14px;
+    width: 4em;
+    height: 2em;
+}
+
+.status-button {
+    margin-left: 2em;
+    width: 8em;
+    height: 2em;
+    border: none;
+    border-radius: .5em;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: #eee;
 }
