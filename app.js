@@ -2,12 +2,13 @@
 let myLibrary = [];
 
 // Book constructor
-function Book(title, author, status) {
-    this.title = title
-    this.author = author
-    this.status = status
-};
-
+class Book {
+    constructor(title, author, status) {
+        this.title = title
+        this.author = author
+        this.status = status
+    };
+}
 // Add book to library
 function addBookToLibrary(book) {
     myLibrary.push(book);
@@ -45,7 +46,7 @@ function displayBooks() {
             }
             displayBooks();
         });
-        
+
         // Book delete button
         const deleteBtn = document.createElement('button');
         deleteBtn.className = "delete-button";
@@ -85,8 +86,14 @@ addBookButton.addEventListener("click", function addNewBook() {
         read = 'Unfinished';
     }
     let newBook = new Book(bookTitle, bookAuthor, read)
+    
+    if (bookTitle !== '' && bookAuthor !== '') {
     addBookToLibrary(newBook);
-    displayBooks();
+    displayBooks(); 
+    } else {
+        alert("Please complete all fields.")
+        clearFields();
+    }
 });
 
 // clear fields 
